@@ -1,0 +1,55 @@
+*.log
+.DS_Store
+Thumbs.db
+
+# Env (não versionar segredos)
+.env
+.env.*
+!.env.example
+!.env.docker
+!frontend/.env
+
+# IDEs
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.phpactor.json
+
+# PHP
+/vendor
+/auth.json
+.phpunit.result.cache
+/.phpunit.cache
+
+# Node
+/node_modules
+frontend/node_modules
+frontend/.vite
+
+# Laravel / Vite build
+/public/build
+/public/hot
+/public/storage
+
+# Storage (Laravel)
+/storage/*
+!/storage/.gitignore
+!/storage/framework/
+!/storage/framework/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+*:Zone.Identifier
+*:Zone.Identifier
+*:Zone.Identifier
+*:Zone.Identifier
+*:Zone.Identifier
+.env
+*:Zone.Identifier
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/

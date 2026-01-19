@@ -1,0 +1,2122 @@
+{
+  "info": {
+    "_postman_id": "4605d68d-41fe-4c16-954c-a37c1e7c33b2",
+    "name": "Gerenciador-Tarefas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18347374",
+    "_collection_link": "https://go.postman.co/collection/18347374-4605d68d-41fe-4c16-954c-a37c1e7c33b2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "autenticacao",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "admin@tarefas.local",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "usuarios",
+      "item": [
+        {
+          "name": "cadastrar-usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4Nzk5NjY4LCJleHAiOjE3Njg4MDMyNjgsIm5iZiI6MTc2ODc5OTY2OCwianRpIjoiWm9WWjVnMjBoR3NlenpVWCIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.FSvv23lmnjRlUCCKogGfAMc-QzV7dxaWBuWHduClURI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "nome",
+                  "value": "Novo usuario04",
+                  "type": "text",
+                  "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                },
+                {
+                  "key": "email",
+                  "value": "novousuario04@tarefas.local",
+                  "type": "text",
+                  "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                },
+                {
+                  "key": "password",
+                  "value": "novousuario123",
+                  "type": "text",
+                  "uuid": "78934bec-173c-46af-9382-5e990ebff1aa"
+                },
+                {
+                  "key": "papeis_ids[]",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "1c408ce7-c71e-44f0-8ed4-eda6d7ec825a"
+                },
+                {
+                  "key": "papeis_ids[]",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "98fa8b76-b560-4183-8e65-a244f0a9a135"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios/cadastrar",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios",
+                "cadastrar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "cadastrar-usuario",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4Nzk5NjY4LCJleHAiOjE3Njg4MDMyNjgsIm5iZiI6MTc2ODc5OTY2OCwianRpIjoiWm9WWjVnMjBoR3NlenpVWCIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.FSvv23lmnjRlUCCKogGfAMc-QzV7dxaWBuWHduClURI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "nome",
+                      "value": "Novo usuario04",
+                      "type": "text",
+                      "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                    },
+                    {
+                      "key": "email",
+                      "value": "novousuario04@tarefas.local",
+                      "type": "text",
+                      "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                    },
+                    {
+                      "key": "password",
+                      "value": "novousuario123",
+                      "type": "text",
+                      "uuid": "78934bec-173c-46af-9382-5e990ebff1aa"
+                    },
+                    {
+                      "key": "papeis_ids[]",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "1c408ce7-c71e-44f0-8ed4-eda6d7ec825a"
+                    },
+                    {
+                      "key": "papeis_ids[]",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "98fa8b76-b560-4183-8e65-a244f0a9a135"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/v1/usuarios/cadastrar",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "usuarios",
+                    "cadastrar"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 19 Jan 2026 05:14:59 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 7,\n    \"nome\": \"Novo usuario04\",\n    \"email\": \"novousuario04@tarefas.local\",\n    \"status\": 1,\n    \"status_desc\": \"Ativo\",\n    \"papeis\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Administrador\"\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Usuario\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "atualizar-usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "nome",
+                  "value": "Usuario update",
+                  "type": "text",
+                  "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                },
+                {
+                  "key": "email",
+                  "value": "novousuario03@tarefas.local",
+                  "type": "text",
+                  "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "type": "text",
+                  "uuid": "78934bec-173c-46af-9382-5e990ebff1aa",
+                  "disabled": true
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "1234568",
+                  "type": "text",
+                  "uuid": "50faf8b7-e8b3-4261-9877-000bae468a90",
+                  "disabled": true
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "6d291187-7df8-4676-813b-ba4f6358ec7f"
+                },
+                {
+                  "key": "papeis_ids[]",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "7afd17fe-1403-43af-b46f-febcf06513f2"
+                },
+                {
+                  "key": "papeis_ids[]",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "03df7d88-d5ae-4b55-bc17-d5ccf7aebb28"
+                },
+                {
+                  "key": "status",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "034cbae7-67a8-4af7-abdf-fb45142e1be8"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios/atualizar/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios",
+                "atualizar",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "atualizar-usuario",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "nome",
+                      "value": "Usuario update",
+                      "type": "text",
+                      "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                    },
+                    {
+                      "key": "email",
+                      "value": "novousuario03@tarefas.local",
+                      "type": "text",
+                      "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456",
+                      "type": "text",
+                      "uuid": "78934bec-173c-46af-9382-5e990ebff1aa",
+                      "disabled": true
+                    },
+                    {
+                      "key": "password_confirmation",
+                      "value": "1234568",
+                      "type": "text",
+                      "uuid": "50faf8b7-e8b3-4261-9877-000bae468a90",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "6d291187-7df8-4676-813b-ba4f6358ec7f"
+                    },
+                    {
+                      "key": "papeis_ids[]",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "7afd17fe-1403-43af-b46f-febcf06513f2"
+                    },
+                    {
+                      "key": "papeis_ids[]",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "03df7d88-d5ae-4b55-bc17-d5ccf7aebb28"
+                    },
+                    {
+                      "key": "status",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "034cbae7-67a8-4af7-abdf-fb45142e1be8"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/v1/usuarios/atualizar/4",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "usuarios",
+                    "atualizar",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 03:09:41 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"mensagem\": \"Usuário atualizado com sucesso.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "perfil",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/auth/perfil",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "auth",
+                "perfil"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "perfil",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/auth/perfil",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "auth",
+                    "perfil"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 03:03:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"nome\": \"Admin\",\n    \"email\": \"admin@tarefas.local\",\n    \"status\": \"Inativo\",\n    \"permissoes\": [\n        \"tarefa.criar\",\n        \"tarefa.listar_todas\",\n        \"tarefa.ver_todas\",\n        \"tarefa.atualizar\",\n        \"tarefa.excluir\",\n        \"tarefa.concluir\",\n        \"tarefa.reabrir\",\n        \"usuario.criar\",\n        \"usuario.listar\",\n        \"usuario.ver\",\n        \"usuario.atualizar\",\n        \"usuario.excluir\"\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "listar-usuarios",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4Nzg0MTc0LCJleHAiOjE3Njg3ODc3NzQsIm5iZiI6MTc2ODc4NDE3NCwianRpIjoiOThSY2luM2hRNUNEcU9sRyIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.s-H5Z73VMvvXvlp-dhx_4CYE4QTEMqQIU7Y3J_RW3G4",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "listar-usuarios",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjEzODUwLCJleHAiOjE3Njg2MTc0NTAsIm5iZiI6MTc2ODYxMzg1MCwianRpIjoieHVUN2Y1b05NZjRXMkNmViIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.jWr9u2JlrWJO1a5qLkuGeFs44xhc3n3Z3UGo3ZPQdSg",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/usuarios",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "usuarios"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 01:59:22 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Admin\",\n        \"email\": \"admin@tarefas.local\",\n        \"status\": \"Ativo\",\n        \"papeis\": [\n            {\n                \"id\": 1,\n                \"nome\": \"Administrador\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Usuario Padrão\",\n        \"email\": \"usuario@tarefas.local\",\n        \"status\": \"Ativo\",\n        \"papeis\": [\n            {\n                \"id\": 2,\n                \"nome\": \"Usuario\"\n            }\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "excluir-usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios/excluir/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios",
+                "excluir",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "excluir-usuario",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjE4ODc5LCJleHAiOjE3Njg2MjI0NzksIm5iZiI6MTc2ODYxODg3OSwianRpIjoiWGVFNjNGV0tTUXptellNTSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.5EDkkTYIPGCyYVK1JErzq_qHzp2EjF_-wHKOJFYZKbM",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/usuarios/excluir/4",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "usuarios",
+                    "excluir",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 03:05:12 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Usuario com ID 4 excluído com sucesso.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "carregar-usuario",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4Nzg0MTc0LCJleHAiOjE3Njg3ODc3NzQsIm5iZiI6MTc2ODc4NDE3NCwianRpIjoiOThSY2luM2hRNUNEcU9sRyIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.s-H5Z73VMvvXvlp-dhx_4CYE4QTEMqQIU7Y3J_RW3G4",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios/carregar/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios",
+                "carregar",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "paginate",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjI1MTk4LCJleHAiOjE3Njg2Mjg3OTgsIm5iZiI6MTc2ODYyNTE5OCwianRpIjoib3dCV3pDdlRqY2tQSGlMUiIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.vuljSq1Nv3pZOc7ODCnujFEfy5Oo0UFCwEsH97-USMc",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/usuarios/paginate?page=1&per_page=5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "usuarios",
+                "paginate"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "per_page",
+                  "value": "5"
+                },
+                {
+                  "key": "busca",
+                  "value": "Novo usuario",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "paginate",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjI1MTk4LCJleHAiOjE3Njg2Mjg3OTgsIm5iZiI6MTc2ODYyNTE5OCwianRpIjoib3dCV3pDdlRqY2tQSGlMUiIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.vuljSq1Nv3pZOc7ODCnujFEfy5Oo0UFCwEsH97-USMc",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/usuarios/paginate?page=1&per_page=5",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "usuarios",
+                    "paginate"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    },
+                    {
+                      "key": "busca",
+                      "value": "Novo usuario",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 04:46:51 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Admin\",\n            \"email\": \"admin@tarefas.local\",\n            \"status\": \"Ativo\",\n            \"papeis\": [\n                {\n                    \"id\": 1,\n                    \"nome\": \"Administrador\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Usuario Padrão\",\n            \"email\": \"usuario@tarefas.local\",\n            \"status\": \"Ativo\",\n            \"papeis\": [\n                {\n                    \"id\": 2,\n                    \"nome\": \"Usuario\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"nome\": \"Usuario update\",\n            \"email\": \"novousuario03@tarefas.local\",\n            \"status\": \"Ativo\",\n            \"papeis\": [\n                {\n                    \"id\": 1,\n                    \"nome\": \"Administrador\"\n                },\n                {\n                    \"id\": 2,\n                    \"nome\": \"Usuario\"\n                }\n            ]\n        }\n    ],\n    \"links\": {\n        \"total\": 3,\n        \"current_page\": 1,\n        \"per_page\": 5,\n        \"last_page\": 1\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tarefa",
+      "item": [
+        {
+          "name": "criar-tarefa",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Teste task",
+                  "type": "text",
+                  "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                },
+                {
+                  "key": "description",
+                  "value": "teste de nova task",
+                  "type": "text",
+                  "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/criar",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "criar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "criar-tarefa",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Teste task",
+                      "type": "text",
+                      "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                    },
+                    {
+                      "key": "description",
+                      "value": "teste de nova task",
+                      "type": "text",
+                      "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/criar",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "criar"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:32:46 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 38,\n    \"title\": \"Teste task\",\n    \"description\": \"teste de nova task\",\n    \"completed\": false,\n    \"completed_desc\": \"Não\",\n    \"created_at\": \"18/01/2026 18:32\",\n    \"updated_at\": \"18/01/2026 18:32\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "atualizar-tarefa",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Atualizando tarefa",
+                  "type": "text",
+                  "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                },
+                {
+                  "key": "description",
+                  "value": "descrição da tarefa atualizada",
+                  "type": "text",
+                  "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                },
+                {
+                  "key": "completed",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "78934bec-173c-46af-9382-5e990ebff1aa"
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "6d291187-7df8-4676-813b-ba4f6358ec7f"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/atualizar/35",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "atualizar",
+                "35"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "atualizar-tarefa",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Atualizando tarefa",
+                      "type": "text",
+                      "uuid": "b9ec5845-e78c-44d1-a0ae-cd37448264fc"
+                    },
+                    {
+                      "key": "description",
+                      "value": "descrição da tarefa atualizada",
+                      "type": "text",
+                      "uuid": "e176b317-4a74-49f1-864a-037044234a5e"
+                    },
+                    {
+                      "key": "completed",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "78934bec-173c-46af-9382-5e990ebff1aa"
+                    },
+                    {
+                      "key": "_method",
+                      "value": "PUT",
+                      "type": "text",
+                      "uuid": "6d291187-7df8-4676-813b-ba4f6358ec7f"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/atualizar/35",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "atualizar",
+                    "35"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:32:58 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 35,\n    \"title\": \"Atualizando tarefa\",\n    \"description\": \"descrição da tarefa atualizada\",\n    \"completed\": true,\n    \"completed_desc\": \"Sim\",\n    \"created_at\": \"17/01/2026 04:09\",\n    \"updated_at\": \"18/01/2026 18:32\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "concluir-tarefa",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/concluir/35",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "concluir",
+                "35"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "concluir-tarefa",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/concluir/35",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "concluir",
+                    "35"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:33:15 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 35,\n    \"title\": \"Atualizando tarefa\",\n    \"description\": \"descrição da tarefa atualizada\",\n    \"completed\": true,\n    \"completed_desc\": \"Sim\",\n    \"created_at\": \"17/01/2026 04:09\",\n    \"updated_at\": \"18/01/2026 18:33\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "reabrir-tarefa",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/reabrir/35",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "reabrir",
+                "35"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "reabrir-tarefa",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/reabrir/35",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "reabrir",
+                    "35"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:33:28 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 35,\n    \"title\": \"Atualizando tarefa\",\n    \"description\": \"descrição da tarefa atualizada\",\n    \"completed\": false,\n    \"completed_desc\": \"Não\",\n    \"created_at\": \"17/01/2026 04:09\",\n    \"updated_at\": \"18/01/2026 18:33\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "carregar-tarefa",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/carregar/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "carregar",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "carregar-tarefa",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/carregar/4",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "carregar",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:33:42 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"title\": \"Criar collection do Postman\",\n    \"description\": \"Montar collection com todos os endpoints e exemplos de payload\",\n    \"completed\": false,\n    \"completed_desc\": \"Não\",\n    \"created_at\": \"31/12/2025 09:56\",\n    \"updated_at\": \"31/12/2025 17:10\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "listar-tarefas",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "listar-tarefas",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYxMTQ3LCJleHAiOjE3Njg3NjQ3NDcsIm5iZiI6MTc2ODc2MTE0NywianRpIjoibGFDNElXODhUdUY0MFA4ciIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.2T0WcMN2BODvx-Kr5PUE2i3UECO0h-aH8IcOmQPEHuI",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:34:53 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 7,\n        \"title\": \"Adicionar filtros no GET /tasks\",\n        \"description\": \"Suportar filtros por completed, busca por texto e intervalo de datas\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"31/12/2025 22:46\",\n        \"updated_at\": \"01/01/2026 03:55\"\n    },\n    {\n        \"id\": 33,\n        \"title\": \"Adicionar log de auditoria\",\n        \"description\": \"Registrar ações críticas (delete, complete) em log simples\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"12/12/2025 04:39\",\n        \"updated_at\": \"12/12/2025 07:03\"\n    },\n    {\n        \"id\": 22,\n        \"title\": \"Adicionar ordenação no listar tarefas\",\n        \"description\": \"Implementar sort e dir com whitelist de colunas\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"04/01/2026 16:09\",\n        \"updated_at\": \"04/01/2026 20:32\"\n    },\n    {\n        \"id\": 21,\n        \"title\": \"Adicionar paginação no listar tarefas\",\n        \"description\": \"Implementar per_page e page com limite máximo\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"11/01/2026 07:01\",\n        \"updated_at\": \"11/01/2026 16:51\"\n    },\n    {\n        \"id\": 19,\n        \"title\": \"Adicionar refresh token\",\n        \"description\": \"Criar endpoint para renovar token JWT quando necessário\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"30/12/2025 09:19\",\n        \"updated_at\": \"30/12/2025 09:51\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Ajustar pipeline do CI\",\n        \"description\": \"Garantir que lint e testes rodem antes do merge na branch principal\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"15/01/2026 07:51\",\n        \"updated_at\": \"15/01/2026 08:47\"\n    },\n    {\n        \"id\": 35,\n        \"title\": \"Atualizando tarefa\",\n        \"description\": \"descrição da tarefa atualizada\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"17/01/2026 04:09\",\n        \"updated_at\": \"18/01/2026 18:33\"\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Code review dos estagiários\",\n        \"description\": \"Revisar Pull Requests dos estagiários antes de aprovar o merge para a próxima release\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"10/01/2026 15:14\",\n        \"updated_at\": \"11/01/2026 00:41\"\n    },\n    {\n        \"id\": 17,\n        \"title\": \"Configurar auth para UsuarioModel\",\n        \"description\": \"Ajustar config/auth.php para usar a tabela usuarios\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"01/01/2026 10:59\",\n        \"updated_at\": \"01/01/2026 17:02\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Criar collection do Postman\",\n        \"description\": \"Montar collection com todos os endpoints e exemplos de payload\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"31/12/2025 09:56\",\n        \"updated_at\": \"31/12/2025 17:10\"\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Criar endpoint de concluir task\",\n        \"description\": \"Implementar PATCH /api/tasks/{id}/complete\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"28/12/2025 10:11\",\n        \"updated_at\": \"28/12/2025 18:46\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Criar endpoint de detalhar task\",\n        \"description\": \"Implementar GET /api/tasks/{id} com retorno no formato do teste\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"16/12/2025 09:19\",\n        \"updated_at\": \"16/12/2025 11:42\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Criar endpoint de excluir task\",\n        \"description\": \"Implementar DELETE /api/tasks/{id} com retorno 204\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"12/01/2026 12:37\",\n        \"updated_at\": \"12/01/2026 22:05\"\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Criar endpoint de reabrir task\",\n        \"description\": \"Implementar PATCH /api/tasks/{id}/reopen\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"03/01/2026 18:00\",\n        \"updated_at\": \"04/01/2026 01:36\"\n    },\n    {\n        \"id\": 18,\n        \"title\": \"Criar login JWT\",\n        \"description\": \"Implementar endpoint de login e retorno do token\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"21/12/2025 06:55\",\n        \"updated_at\": \"21/12/2025 16:17\"\n    },\n    {\n        \"id\": 16,\n        \"title\": \"Criar middleware ACL\",\n        \"description\": \"Proteger rotas de tasks com verificacao de permissao\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"11/01/2026 17:03\",\n        \"updated_at\": \"11/01/2026 20:05\"\n    },\n    {\n        \"id\": 28,\n        \"title\": \"Criar script de setup\",\n        \"description\": \"Criar passo a passo para rodar projeto: build, migrate, seed\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"08/01/2026 20:51\",\n        \"updated_at\": \"09/01/2026 04:29\"\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Criar seed de papéis\",\n        \"description\": \"Popular papeis Administrador e Usuario\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"10/01/2026 11:09\",\n        \"updated_at\": \"10/01/2026 21:06\"\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Criar seed de permissões\",\n        \"description\": \"Popular permissoes tarefa.* e usuario.*\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"26/12/2025 11:56\",\n        \"updated_at\": \"26/12/2025 19:25\"\n    },\n    {\n        \"id\": 25,\n        \"title\": \"Criar testes de ACL\",\n        \"description\": \"Validar 403 quando usuario não tem permissão\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"13/12/2025 10:19\",\n        \"updated_at\": \"13/12/2025 13:30\"\n    },\n    {\n        \"id\": 24,\n        \"title\": \"Criar testes de autenticação\",\n        \"description\": \"Testar login e acesso com token JWT\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"12/12/2025 15:33\",\n        \"updated_at\": \"12/12/2025 18:03\"\n    },\n    {\n        \"id\": 23,\n        \"title\": \"Criar testes de feature\",\n        \"description\": \"Testar criar/listar/atualizar tarefas com PHPUnit\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"24/12/2025 16:45\",\n        \"updated_at\": \"24/12/2025 20:40\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Documentar endpoints no README\",\n        \"description\": \"Descrever rotas, filtros, paginação e exemplos de resposta\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"13/01/2026 20:57\",\n        \"updated_at\": \"14/01/2026 04:09\"\n    },\n    {\n        \"id\": 20,\n        \"title\": \"Garantir CORS para o front\",\n        \"description\": \"Configurar CORS para permitir chamadas do front-end\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"13/12/2025 10:46\",\n        \"updated_at\": \"13/12/2025 19:31\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Padronizar retornos de erro\",\n        \"description\": \"Garantir 422 para validação e 404 quando o recurso não existir\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"17/12/2025 17:55\",\n        \"updated_at\": \"17/12/2025 18:06\"\n    },\n    {\n        \"id\": 27,\n        \"title\": \"Padronizar timezone e datas\",\n        \"description\": \"Garantir created_at/updated_at no formato Y-m-d H:i:s\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"11/01/2026 03:30\",\n        \"updated_at\": \"11/01/2026 05:44\"\n    },\n    {\n        \"id\": 31,\n        \"title\": \"Preparar entrega do teste\",\n        \"description\": \"Validar endpoints no Postman e revisar README final\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"26/12/2025 21:23\",\n        \"updated_at\": \"27/12/2025 04:08\"\n    },\n    {\n        \"id\": 32,\n        \"title\": \"Refatorar controller de tasks\",\n        \"description\": \"Separar validação, filtros e responses para manter o controller limpo\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"29/12/2025 14:04\",\n        \"updated_at\": \"29/12/2025 17:33\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Revisar backlog da sprint\",\n        \"description\": \"Validar prioridades e remover itens duplicados do backlog\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"29/12/2025 14:51\",\n        \"updated_at\": \"29/12/2025 22:16\"\n    },\n    {\n        \"id\": 26,\n        \"title\": \"Revisar docker-compose\",\n        \"description\": \"Garantir que arquivos não sejam criados como root no volume\",\n        \"completed\": true,\n        \"completed_desc\": \"Sim\",\n        \"created_at\": \"10/01/2026 19:18\",\n        \"updated_at\": \"10/01/2026 20:08\"\n    },\n    {\n        \"id\": 30,\n        \"title\": \"Revisar qualidade do código\",\n        \"description\": \"Rodar phpstan/pint e corrigir warnings básicos\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"13/01/2026 15:34\",\n        \"updated_at\": \"13/01/2026 17:31\"\n    },\n    {\n        \"id\": 29,\n        \"title\": \"Revisar variáveis de ambiente\",\n        \"description\": \"Conferir APP_KEY, DB_HOST, DB_DATABASE, JWT_SECRET\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"12/01/2026 14:54\",\n        \"updated_at\": \"12/01/2026 23:31\"\n    },\n    {\n        \"id\": 34,\n        \"title\": \"Teste task\",\n        \"description\": \"teste de nova task\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"17/01/2026 04:06\",\n        \"updated_at\": \"17/01/2026 04:06\"\n    },\n    {\n        \"id\": 37,\n        \"title\": \"Teste task\",\n        \"description\": \"teste de nova task\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"18/01/2026 18:26\",\n        \"updated_at\": \"18/01/2026 18:26\"\n    },\n    {\n        \"id\": 38,\n        \"title\": \"Teste task\",\n        \"description\": \"teste de nova task\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"18/01/2026 18:32\",\n        \"updated_at\": \"18/01/2026 18:32\"\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Vincular permissões ao Administrador\",\n        \"description\": \"Garantir que o papel Administrador tenha todas as permissoes\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"24/12/2025 12:22\",\n        \"updated_at\": \"24/12/2025 14:28\"\n    },\n    {\n        \"id\": 15,\n        \"title\": \"Vincular permissões ao Usuario\",\n        \"description\": \"Garantir que Usuario tenha permissoes básicas de tarefas\",\n        \"completed\": false,\n        \"completed_desc\": \"Não\",\n        \"created_at\": \"13/01/2026 03:09\",\n        \"updated_at\": \"13/01/2026 07:25\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "paginate",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYwNTI4LCJleHAiOjE3Njg3NjQxMjgsIm5iZiI6MTc2ODc2MDUyOCwianRpIjoiTmg1RlBzemt4ZmpuSjVaSSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.zSzDticfmMgrEj90YMFtP7EaTpT6FWCLFUKps4jFl6I",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/paginate?page=1&per_page=5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "paginate"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "per_page",
+                  "value": "5"
+                },
+                {
+                  "key": "busca",
+                  "value": "Novo usuario",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "paginate",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzYwNTI4LCJleHAiOjE3Njg3NjQxMjgsIm5iZiI6MTc2ODc2MDUyOCwianRpIjoiTmg1RlBzemt4ZmpuSjVaSSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.zSzDticfmMgrEj90YMFtP7EaTpT6FWCLFUKps4jFl6I",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/tarefas/paginate?page=1&per_page=5",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "tarefas",
+                    "paginate"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    },
+                    {
+                      "key": "busca",
+                      "value": "Novo usuario",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 18:35:31 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 7,\n            \"title\": \"Adicionar filtros no GET /tasks\",\n            \"description\": \"Suportar filtros por completed, busca por texto e intervalo de datas\",\n            \"completed\": false,\n            \"completed_desc\": \"Não\",\n            \"created_at\": \"31/12/2025 22:46\",\n            \"updated_at\": \"01/01/2026 03:55\"\n        },\n        {\n            \"id\": 33,\n            \"title\": \"Adicionar log de auditoria\",\n            \"description\": \"Registrar ações críticas (delete, complete) em log simples\",\n            \"completed\": false,\n            \"completed_desc\": \"Não\",\n            \"created_at\": \"12/12/2025 04:39\",\n            \"updated_at\": \"12/12/2025 07:03\"\n        },\n        {\n            \"id\": 22,\n            \"title\": \"Adicionar ordenação no listar tarefas\",\n            \"description\": \"Implementar sort e dir com whitelist de colunas\",\n            \"completed\": false,\n            \"completed_desc\": \"Não\",\n            \"created_at\": \"04/01/2026 16:09\",\n            \"updated_at\": \"04/01/2026 20:32\"\n        },\n        {\n            \"id\": 21,\n            \"title\": \"Adicionar paginação no listar tarefas\",\n            \"description\": \"Implementar per_page e page com limite máximo\",\n            \"completed\": true,\n            \"completed_desc\": \"Sim\",\n            \"created_at\": \"11/01/2026 07:01\",\n            \"updated_at\": \"11/01/2026 16:51\"\n        },\n        {\n            \"id\": 19,\n            \"title\": \"Adicionar refresh token\",\n            \"description\": \"Criar endpoint para renovar token JWT quando necessário\",\n            \"completed\": false,\n            \"completed_desc\": \"Não\",\n            \"created_at\": \"30/12/2025 09:19\",\n            \"updated_at\": \"30/12/2025 09:51\"\n        }\n    ],\n    \"links\": {\n        \"total\": 37,\n        \"current_page\": 1,\n        \"per_page\": 5,\n        \"last_page\": 8\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "excluir-tarefa",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzU5MDc5LCJleHAiOjE3Njg3NjI2NzksIm5iZiI6MTc2ODc1OTA3OSwianRpIjoiUkZ0RjlDODdLNU1tZllCMSIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.lr02zq0oMjMkzU21Ruh-fxf3MESxcSV2Wz_SlCanTww",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/tarefas/excluir/36",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "tarefas",
+                "excluir",
+                "36"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "papeis",
+      "item": [
+        {
+          "name": "listar-papeis",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NzU2MzgxLCJleHAiOjE3Njg3NTk5ODEsIm5iZiI6MTc2ODc1NjM4MSwianRpIjoiMExXRkE0ZFhJR21icjh4MyIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0._h6Ds9aDElNf8poc-gMMaVATIVqzkWZBUXYogwt09pM",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-Requested-With",
+                "value": "XMLHttpRequest",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v1/papeis",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "v1",
+                "papeis"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "listar-papeis",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvYXBpL2xvZ2luIiwiaWF0IjoxNzY4NjI1MTMxLCJleHAiOjE3Njg2Mjg3MzEsIm5iZiI6MTc2ODYyNTEzMSwianRpIjoibUdVTmRhU2lkMFZ6OEFoMCIsInN1YiI6IjEiLCJwcnYiOiJlMzk5ZTVhMjdlZTk4MjMwNmViNWY1YjM2OWEyYjQ3ODRlMDQyM2IxIn0.cF9Pn1QmpnHqt424ixP_bkXLu_wVfjCMizVL8Xp1vU4",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Requested-With",
+                    "value": "XMLHttpRequest",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/v1/papeis",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "papeis"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 04:45:44 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.66 (Unix)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.29"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Administrador\"\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Usuario\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
